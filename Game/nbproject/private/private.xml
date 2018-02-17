@@ -4,7 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/GameWorld.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/Acorn.java</file>
             <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/Game.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/SquirrelPickup.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/SquirrelController.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/Squirrel.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/Bird.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/BirdController.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/BirdPickup.java</file>
+            <file>file:/C:/Users/jorda/OneDrive%20-%20City,%20University%20of%20London/IN1007%20-%20Programming%20in%20Java/Projects/Game/IN1007_Game/Game/src/game/Orange.java</file>
         </group>
     </open-files>
 </project-private>

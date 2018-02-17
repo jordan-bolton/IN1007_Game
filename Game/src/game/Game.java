@@ -51,14 +51,15 @@ public class Game {
         
         
         
-        
-        frame.addKeyListener(new Controller(world.getPlayer()));
+        // code for making a dynamic body such as the bird and squirrel move
+        frame.addKeyListener(new SquirrelController(world.getSquirrel()));
+        frame.addKeyListener(new BirdController(world.getBird()));
         
         // uncomment to make the view track the bird
         // world.addStepListener(new Tracker(view, world.getPlayer()));
 
         // uncomment this to make a debugging view
-        // JFrame debugView = new DebugViewer(world, 500, 500);
+        //JFrame debugView = new DebugViewer(world, 500, 500);
 
         // start!
         world.start();
