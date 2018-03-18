@@ -30,8 +30,15 @@ private static final Shape shape = new PolygonShape(
         return orangeCount;
     }
 
+    public void setOrangeCount(int count) {
+        this.orangeCount = count;
+    }
+    
+    
     public void incrementOrangeCount() {
         orangeCount++;
         System.out.println("Orange collected.  Orange count = " + orangeCount);
     }
+    
+    
 }

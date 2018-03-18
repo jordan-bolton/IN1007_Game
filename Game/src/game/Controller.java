@@ -8,13 +8,13 @@ import java.awt.event.KeyEvent;
 /**
  * Key handler to control an Walker.
  */
-public class SquirrelController extends KeyAdapter {
+public class Controller extends KeyAdapter {
     private static final float JUMPING_SPEED = 15;
     private static final float WALKING_SPEED = 4;
     
     private Walker body;
-    
-    public SquirrelController(Walker body) {
+
+    public Controller(Walker body) {
         this.body = body;
     }
     
@@ -27,16 +27,16 @@ public class SquirrelController extends KeyAdapter {
         int code = e.getKeyCode();
         if (code == KeyEvent.VK_Q) { // Q = quit
             System.exit(0);
-        } else if (code == KeyEvent.VK_SPACE) { // space = jump
+        } else if (code == KeyEvent.VK_COMMA) { // COMMA = jump
             Vec2 v = body.getLinearVelocity();
             // only jump if body is not already jumping
             if (Math.abs(v.y) < 0.01f) {
                 body.jump(JUMPING_SPEED);
             }
-        } else if (code == KeyEvent.VK_A) {
-            body.startWalking(-WALKING_SPEED); // A = walk left
-        } else if (code == KeyEvent.VK_D) {
-            body.startWalking(WALKING_SPEED); // D = walk right
+        } else if (code == KeyEvent.VK_LEFT) {
+            body.startWalking(- WALKING_SPEED); // LEFT ARROW = walk left
+        } else if (code == KeyEvent.VK_RIGHT) {
+            body.startWalking(WALKING_SPEED); // RIGHT ARROW = walk right
         }
     }
     
@@ -47,9 +47,9 @@ public class SquirrelController extends KeyAdapter {
     @Override
     public void keyReleased(KeyEvent e) {
         int code = e.getKeyCode();
-        if (code == KeyEvent.VK_A) {
+        if (code == KeyEvent.VK_LEFT) {
             body.stopWalking();
-        } else if (code == KeyEvent.VK_D) {
+        } else if (code == KeyEvent.VK_RIGHT) {
             body.stopWalking();
         }
     }

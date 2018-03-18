@@ -19,7 +19,7 @@ public class BirdController extends KeyAdapter {
     }
     
     /**
-     * Handle key press events for walking and jumping.
+     * Handle key press events for walking and jumping with the bird
      * @param e description of the key event
      */
     @Override
