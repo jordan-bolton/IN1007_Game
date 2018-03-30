@@ -1,7 +1,11 @@
 package game;
 
+import city.cs.engine.SoundClip;
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.io.IOException;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 import javax.swing.JFrame;
 
@@ -18,7 +22,7 @@ public class Game {
     private int level;
     private Controller controller;
     private SquirrelController controller2;
-    
+    private SoundClip backgroundMusic;
 
     /** Initialise a new Game. */
     public Game() {
@@ -26,6 +30,17 @@ public class Game {
         level = 1;
         world = new Level1();
         world.populate(this);
+        
+        // background music for level 1 (initial level)
+        try {
+            backgroundMusic = new SoundClip("data/sound/bg_music_l1.wav");
+            // changes the volume to make the background music quieter
+            backgroundMusic.setVolume(0.5);
+            backgroundMusic.loop();
+        }
+        catch (UnsupportedAudioFileException|IOException|LineUnavailableException e) {
+            System.out.println(e);
+        }
 
         view = new MyView(world, world.getPlayer(), 500, 500);
 
@@ -114,9 +129,23 @@ public class Game {
             level++;
             // get a new world
             world = new Level2();
-            
+            // stops the previous music from playing
+            backgroundMusic.close();
             // fill it with bodies
             world.populate(this);
+            
+            // background music for level 2
+            try {
+                
+                backgroundMusic = new SoundClip("data/sound/bg_music_l2.wav");
+                backgroundMusic.setVolume(0.3);
+                backgroundMusic.loop();
+            }
+            catch (UnsupportedAudioFileException|IOException|LineUnavailableException e) {
+                System.out.println(e);
+            }
+            
+            
             // switch the keyboard control to the new player
             controller.setBody(world.getPlayer());
             controller2.setBody(world.getPlayer2());
@@ -131,8 +160,21 @@ public class Game {
             level++;
             // get a new world
             world = new Level3();
+            // stops the previous music from playing
+            backgroundMusic.close();
             // fill it with bodies
             world.populate(this);
+            
+            // background music for level 3
+            try {
+                
+                backgroundMusic = new SoundClip("data/sound/bg_music_l3.wav");
+                backgroundMusic.setVolume(0.3);
+                backgroundMusic.loop();
+            }
+            catch (UnsupportedAudioFileException|IOException|LineUnavailableException e) {
+                System.out.println(e);
+            }
             // switch the keyboard control to the new player
             controller.setBody(world.getPlayer());
             controller2.setBody((world.getPlayer2()));
